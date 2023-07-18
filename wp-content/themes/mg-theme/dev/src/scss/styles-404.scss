@@ -1,0 +1,18 @@
+@import 'base/all';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+.page404{
+  margin-bottom: 30px;
+  padding-top: clamp(100px, cqi(260), 260px);
+  padding-bottom: clamp(20px, cqi(210), 210px);
+  text-align: center;
+  background: url('../img/404.png') no-repeat center bottom / auto 100%;
+  .container{
+    width: 900px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}

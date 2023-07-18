@@ -1,0 +1,15 @@
+@import 'functions';
+@import 'fonts';
+@import 'colors';
+@import 'reset';
+@import 'typography';
+@import 'layout';
+@import 'btn';
+
+.pixel-perfect{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  opacity: .5;
+}

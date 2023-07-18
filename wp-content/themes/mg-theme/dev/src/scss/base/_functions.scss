@@ -1,0 +1,7 @@
+@function vw($px-vw, $base-vw: 1200px){
+  @return $px-vw * 100vw / $base-vw;
+}
+
+@function cqi($fz){
+  @return $fz / 1200 * 100cqi;
+}

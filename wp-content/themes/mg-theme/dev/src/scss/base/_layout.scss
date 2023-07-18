@@ -1,0 +1,18 @@
+.container{
+  width: 1200px;
+  max-width: 100%;
+  padding-left: clamp(10px, cqi(15), 15px);
+  padding-right: clamp(10px, cqi(15), 15px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+section{
+  padding-top: clamp(40px, cqi(73), 73px);
+  padding-bottom: clamp(40px, cqi(58), 58px);
+}

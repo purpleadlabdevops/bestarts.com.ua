@@ -1,0 +1,56 @@
+.modal{
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity 1s ease;
+  position: fixed;
+  left: 0; top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 50px 15px;
+  overflow-y: auto;
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    z-index: 99;
+  }
+  &__wrap{
+    background: rgba(0,0,0, .85);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    transition: .3s ease;
+    border: none;
+    &:hover{
+      background: rgba(0,0,0, .8);
+    }
+  }
+  &__inner{
+    position: relative;
+    background: var(--white);
+    max-width: 992px;
+    padding: clamp(15px, cqi(30), 30px);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+  }
+  &__close{
+    position: absolute;
+    right: 0; top: 0;
+    background: none;
+    border: none;
+    font-size: 40px;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    &:after{
+      display: inline-block;
+      content: "\00d7";
+    }
+  }
+}

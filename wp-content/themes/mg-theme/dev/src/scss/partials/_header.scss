@@ -1,0 +1,19 @@
+.main-header{
+  background: var(--purple);
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img{
+    height: clamp(45px, cqi(59), 59px);
+    width: auto;
+    display: block;
+  }
+  a{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    padding: 10px 0;
+  }
+}

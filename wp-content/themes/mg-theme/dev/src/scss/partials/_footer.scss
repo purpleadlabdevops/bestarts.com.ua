@@ -1,0 +1,28 @@
+.main-footer{
+  background: var(--light);
+  color: var(--dark);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media(max-width:767px){
+    text-align: center;
+  }
+  a{
+    color: var(--dark);
+  }
+  .container{
+    @media(min-width:768px){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__info{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media(min-width:768px){
+      width: calc(100% / 3);
+    }
+  }
+  b{
+    color: var(--gray-third);
+  }
+}
