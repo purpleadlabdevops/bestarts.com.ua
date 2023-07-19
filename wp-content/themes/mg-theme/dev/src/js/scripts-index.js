@@ -1,7 +1,5 @@
 //= partials/ajaxRequest.js
 
-
-
 (function(){
 
   const scrolls = document.querySelectorAll('.scroll')
@@ -52,26 +50,12 @@
     window.onscroll = function() {};
   }
 
-  // const fieldsValues = [
-  //   { price: 390,  old_price: 590,  value: "Цифровий формат PNG/JPG" },
-  //   { price: 670,  old_price: 850,  value: "Цифровий формат PNG/JPG + Друк на полотні 20х30" },
-  //   { price: 670,  old_price: 850,  value: "Цифровий формат PNG/JPG + Друк на полотні 30х40" },
-  //   { price: 790,  old_price: 950,  value: "Цифровий формат PNG/JPG + Друк на полотні 30х50" },
-  //   { price: 790,  old_price: 950,  value: "Цифровий формат PNG/JPG + Друк на полотні 40х40" },
-  //   { price: 830,  old_price: 1250, value: "Цифровий формат PNG/JPG + Друк на полотні 40х50" },
-  //   { price: 830,  old_price: 1250, value: "Цифровий формат PNG/JPG + Друк на полотні 50х50" },
-  //   { price: 890,  old_price: 1250, value: "Цифровий формат PNG/JPG + Друк на полотні 40х60" },
-  //   { price: 1100, old_price: 1450, value: "Цифровий формат PNG/JPG + Друк на полотні 50х70" },
-  //   { price: 1340, old_price: 1650, value: "Цифровий формат PNG/JPG + Друк на полотні 60х80" },
-  // ]
-
   setTimeout(()=>{
     let sizeNew
     fieldsValues.forEach(val => {
       sizeNew += `<option value="${val.name}">${val.name}</option>`
     })
     document.getElementById('size').innerHTML = sizeNew
-    // document.querySelector('.disney__price').innerHTML = `₴${fieldsValues[0].price.toFixed(2)} <strike>₴${fieldsValues[0].old_price.toFixed(2)}</strike>`
   }, 1000);
 
   const sizeSelect = document.getElementById('size')
@@ -97,7 +81,6 @@
         document.querySelector('label[for="images"]').style.color = 'var(--dark)'
       }, 1000);
     }
-
   })
 
   const fieldsClose = document.querySelector('.fieldsClose')
@@ -105,7 +88,6 @@
     document.querySelector('.field__popup').classList.remove('active')
     enableScroll()
   })
-
 
   const wpcf7Elm = document.querySelector( '.wpcf7' )
   wpcf7Elm.addEventListener( 'wpcf7submit', event => {
@@ -115,13 +97,3 @@
   }, false )
 
 })();
-
-
-
-
-
-
-
-
-
-
