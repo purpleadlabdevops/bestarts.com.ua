@@ -44,8 +44,11 @@
     }
   }
   &__slider{
+    margin-bottom: 30px;
     @media(min-width:768px){
       width: calc(50% - 30px);
+      order: 2;
+      margin-bottom: 0;
     }
   }
   &__nav{
@@ -149,6 +152,19 @@
     height: 50px;
     display: block;
     width: 100%;
+    &::-webkit-file-upload-button {
+      border: none;
+      background: #4f7bff;
+      border-radius: 8px;
+      padding: 10px 15px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--white);
+    }
   }
   & > button[type="button"]{
     border: none;

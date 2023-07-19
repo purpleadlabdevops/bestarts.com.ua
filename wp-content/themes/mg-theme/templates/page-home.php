@@ -15,18 +15,15 @@ get_header(); ?>
   </div>
 </section>
 
+<?php $products = get_field('disney_products'); ?>
+<script>
+const fieldsValues = <?php echo json_encode($products); ?>;
+</script>
+
 <section class="disney" id="disney">
   <div class="container">
     <h2><?php the_field('disney_title'); ?></h2>
     <div class="disney__row">
-      <div class="disney__form">
-        <h4><?php the_field('disney_subtitle'); ?></h4>
-        <div class="disney__price">
-          ₴670.00 <strike>₴850.00</strike>
-        </div>
-        <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form"]'); ?>
-        <p class="disney__sign"><?php the_field('disney_sign'); ?></p>
-      </div>
       <?php $i=0; $disney_slider = get_field('disney_slider'); ?>
       <div class="disney__slider">
         <img class="disney__image" src="<?php echo $disney_slider[0]; ?>" />
@@ -35,6 +32,14 @@ get_header(); ?>
             <img src="<?php echo $image; ?>" <?php if($i === 1){echo 'class="active"';} ?> />
           <?php endforeach; ?>
         </div>
+      </div>
+      <div class="disney__form">
+        <h4><?php the_field('disney_subtitle'); ?></h4>
+        <div class="disney__price">
+          ₴<?php echo $products[0]['price']; ?>.00 <strike>₴<?php echo $products[0]['old_price']; ?>.00</strike>
+        </div>
+        <?php echo do_shortcode('[contact-form-7 id="17" title="Contact form"]'); ?>
+        <p class="disney__sign"><?php the_field('disney_sign'); ?></p>
       </div>
     </div>
   </div>
